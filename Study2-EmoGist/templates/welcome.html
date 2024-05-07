@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page</title>
+</head>
+<body>
+    <h1>Welcome to the Experiment</h1>
+
+    <div class="container">
+        <div class="header">
+          <h4>Hi, {{user['family_name']}}</h4>
+          <div class="img-box">
+            <img class="img" src="{{user['picture']}}" />
+          </div>
+        </div>
+        <a href="/logout" class="google-btn">
+          <div class="google-icon"></div>
+          <span class="btn-text">Logout</span>
+        </a>
+    </div>
+
+    <p>Click the button below to start the experiment.</p>
+    <form action="/start" method="post">
+        <button type="submit">Start Experiment</button>
+    </form>
+</body>
+</html>

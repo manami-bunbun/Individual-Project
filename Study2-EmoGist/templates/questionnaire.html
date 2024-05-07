@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/questionnaire.css">
+</head>
+<body>
+    <h1>Questionnaire</h1>
+    <h5>If you need to take a break, please do so before submitting your questionnaire</h5>
+    <form id="questionnaireForm" method="post">
+        <fieldset>
+            <!-- <legend>Please answer all 9 questions</legend> -->
+            <div class="question">
+
+                <label for="mental_demand">How mentally demanding was the task?</label>
+                <div class="rating">
+                    <input type="radio" id="mental_demand1" name="mental_demand" value="1">
+                    <input type="radio" id="mental_demand2" name="mental_demand" value="2">
+                    <input type="radio" id="mental_demand3" name="mental_demand" value="3">
+                    <input type="radio" id="mental_demand4" name="mental_demand" value="4">
+                    <input type="radio" id="mental_demand5" name="mental_demand" value="5">
+                    <div class="line"></div>
+                </div>
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="physical_demand">How physically demanding was the task?</label>
+                <div class="rating">
+                    <input type="radio" id="physical_demand1" name="physical_demand" value="1">
+                    <input type="radio" id="physical_demand2" name="physical_demand" value="2">
+                    <input type="radio" id="physical_demand3" name="physical_demand" value="3">
+                    <input type="radio" id="physical_demand4" name="physical_demand" value="4">
+                    <input type="radio" id="physical_demand5" name="physical_demand" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="pace">How hurried or rushed was the pace of the task?</label>
+                <div class="rating">
+                    <input type="radio" id="pace1" name="pace" value="1">
+                    <input type="radio" id="pace2" name="pace" value="2">
+                    <input type="radio" id="pace3" name="pace" value="3">
+                    <input type="radio" id="pace4" name="pace" value="4">
+                    <input type="radio" id="pace5" name="pace" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="success">How successful were you in accomplishing what you were asked to do?</label>
+                <div class="rating">
+                    <input type="radio" id="success1" name="success" value="1">
+                    <input type="radio" id="success2" name="success" value="2">
+                    <input type="radio" id="success3" name="success" value="3">
+                    <input type="radio" id="success4" name="success" value="4">
+                    <input type="radio" id="success5" name="success" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="hard_work">How hard did you have to work to accomplish your level of performance?</label>
+                <div class="rating">
+                    <input type="radio" id="hard_work1" name="hard_work" value="1">
+                    <input type="radio" id="hard_work2" name="hard_work" value="2">
+                    <input type="radio" id="hard_work3" name="hard_work" value="3">
+                    <input type="radio" id="hard_work4" name="hard_work" value="4">
+                    <input type="radio" id="hard_work5" name="hard_work" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="emotions">How insecure, discouraged, irritated, stressed, and annoyed were you?</label>
+                <div class="rating">
+                    <input type="radio" id="emotions1" name="emotions" value="1">
+                    <input type="radio" id="emotions2" name="emotions" value="2">
+                    <input type="radio" id="emotions3" name="emotions" value="3">
+                    <input type="radio" id="emotions4" name="emotions" value="4">
+                    <input type="radio" id="emotions5" name="emotions" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>To what extent do you agree with the statement?</legend>
+            
+            <div class="question">
+                <label for="info_infer">It was possible to infer the content of the emails from the information in the Inbox.</label>
+                <div class="rating">
+                    <input type="radio" id="info_infer1" name="info_infer" value="1">
+                    <input type="radio" id="info_infer2" name="info_infer" value="2">
+                    <input type="radio" id="info_infer3" name="info_infer" value="3">
+                    <input type="radio" id="info_infer4" name="info_infer" value="4">
+                    <input type="radio" id="info_infer5" name="info_infer" value="5">
+                    <div class="line"></div>
+                </div>
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Perfect</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="emotion">Tell me how you feel now.</label>
+                <div class="rating">
+                    <input type="radio" id="emotion1" name="emotion" value="1">
+                    <input type="radio" id="emotion2" name="emotion" value="2">
+                    <input type="radio" id="emotion3" name="emotion" value="3">
+                    <input type="radio" id="emotion4" name="emotion" value="4">
+                    <input type="radio" id="emotion5" name="emotion" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Very Negative</span>
+                    <span>Very Positive</span>
+                </div>
+            </div>
+            
+            <!-- <div class="question">
+                <label for="emotion">I found the amount of information in my inbox was low.</label>
+                <div class="rating">
+                    <input type="radio" id="inbox_info_low1" name="inbox_info_low" value="1">
+                    <input type="radio" id="inbox_info_low2" name="inbox_info_low" value="2">
+                    <input type="radio" id="inbox_info_low3" name="inbox_info_low" value="3">
+                    <input type="radio" id="inbox_info_low4" name="inbox_info_low" value="4">
+                    <input type="radio" id="inbox_info_low5" name="inbox_info_low" value="5">
+                    <div class="line"></div>
+                </div>
+
+                <div class="rating-text">
+                    <span>Not at all</span>
+                    <span>Very much</span>
+                </div>
+            </div> -->
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="/static/js/questionnaire.js"></script>
+    <script>
+        var condition = "{{ condition }}";
+
+    </script>
+</body>
+</html>

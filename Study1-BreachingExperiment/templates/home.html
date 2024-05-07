@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            /* background-color: #f0f0f0; */
+            font-size: 17px;
+            width: 300px;
+            background-color: #f0f0f0;
+        }
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-right: 15px;
+        }
+        .step-content a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .step.disabled{
+            pointer-events: none;
+            background-color: #f0f0f0;
+        }
+        .step.active, .step.completed {
+            background-color: #add8e6;
+        }
+        .step.active .step-circle, .step.completed .step-circle {
+            background-color: rgb(56, 92, 221);
+        }
+        #privacy-policy-link {
+            position: fixed; 
+            right: 10px;
+            bottom: 10px; 
+            font-size: 12px; 
+        }
+    </style>
+</head>
+<body>
+    <h3>Hi, please follow these steps. <br> DON'T back your page with the browser botton</h3>
+    <div class="container">
+        <!-- <a href="https://forms.office.com/e/D1tgc38A2n" id="step1" class="step active" target="_blank" rel="noopener noreferrer" onclick="activateStep(1)">
+            <div class="step-circle">1</div>
+            <div class="step-content">Consent Form</div>
+        </a> -->
+        <a href="/start" id="step2" class="step active">
+            <div class="step-circle">1</div>
+            <div class="step-content">Start Experiment</div>
+        </a>
+        <!-- <a href="https://forms.office.com/e/gU0H5BaMhw" id="step3" class="step active" target="_blank" rel="noopener noreferrer" onclick="activateStep(3)">
+            <div class="step-circle">2</div>
+            <div class="step-content">Final Questionnaire</div>
+        </a> -->
+        <!-- <a href="#" id="step4" class="step disabled" onclick="activateStep(4)">
+            <div class="step-circle">4</div>
+            <div class="step-content">Experiment 2</div>
+        </a>
+        <a href="#" id="step5" class="step disabled" target="_blank" rel="noopener noreferrer" onclick="activateStep(5)">
+            <div class="step-circle">5</div>
+            <div class="step-content">Questionnaire 2</div>
+        </a> -->
+        <a id="step4" class="step active" onclick="openFormAndRedirect()">
+            <div class="step-circle">2</div>
+            <div class="step-content">Final Questionnaire <br> & Auto Logout</div>
+        </a>
+    </div>
+    <div id="privacy-policy-link">
+        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+    </div>
+
+    <script>
+        function openFormAndRedirect() {
+            window.open('https://forms.office.com/e/gU0H5BaMhw', '_blank');
+            window.location.href = '/end';
+        }
+        // var currentnum = {{ current_step }};
+
+
+
+        // window.onload = function() {
+        //     var currentCells = document.getElementById('step' + currentnum);
+        //     currentCells.classList.add('active');
+
+        //     for (var i = currentnum+1; i <= 4; i++) {
+        //         var cell = document.getElementById('step' + i);
+        //         if (cell) {
+        //             cell.classList.add('disabled');
+        //         }
+        //     }
+        // }
+
+
+        // async function activateStep(stepNumber) {
+        //     stepNumber = parseInt(stepNumber)
+        //     nextNumber = stepNumber +1;
+
+        //     var currentStep = document.getElementById('step' + stepNumber);
+        //     currentStep.classList.remove('active');
+
+        //     var nextStep = document.getElementById('step' + nextNumber);
+        //     if (nextStep) {
+        //         nextStep.classList.remove('disabled');
+        //         nextStep.classList.add('active');
+        //     }
+        //     await fetch(`/step/${stepNumber}`, {method: 'GET'});
+        //     // window.location.href = '/home';
+        // }
+    </script>
+</body>
+</html>
+

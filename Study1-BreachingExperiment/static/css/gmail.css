@@ -1,0 +1,341 @@
+/* base : https://codepen.io/codingtuto/pen/gOmLRKR */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: #f7f8fa;
+  }
+
+  body, h1, h2, h3, p, table {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Header */
+  .header__left img {
+    object-fit: contain;
+    height: 65px;
+    margin-left: 5px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    margin-left: 20px;
+  }
+  
+  .header__left {
+    display: flex;
+    align-items: center;
+    max-width: 220px;
+    padding-right: 30px;
+  }
+  
+  .header__left span {
+    padding: 10px;
+    cursor: pointer;
+    color: #818181;
+  }
+  
+  .header__middle {
+    display: flex;
+    width: 1600px;
+    flex: 0.7;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+    height: 30px;
+  }
+  
+  .material-icons {
+    color: gray;
+    font-size: 20px;
+  }
+  
+  .header__middle input {
+    border: none;
+    width: 100%;
+    padding: 30px;
+    outline: none;
+    font-size: medium;
+    background-color: transparent;
+  }
+  
+  .header__right {
+    margin-left: auto;
+    display: flex;
+    padding-right: 20px;
+  }
+  
+  .header__right span {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 0.3;
+    max-width: 220px;
+    padding-right: 20px;
+  }
+  
+  .sidebar__compose {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: gray;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+  }
+  
+  .sidebar__compose span {
+    margin-right: 5px;
+  }
+  
+  .sidebarOption {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    color: #818181;
+  }
+
+  .sidebarOption .material-icons {
+    padding: 5px;
+  }
+  
+  .sidebarOption h3 {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .sidebarOption:hover,
+  .sidebarOption:hover h3,
+  .sidebarOption:hover .material-icons,
+  .sidebarOption__active,
+  .sidebarOption__active h3,
+  .sidebarOption__active .material-icons {
+    background-color: #a8c7fa;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .sidebar__footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sidebar__footerIcons .material-icons {
+    margin: 7px;
+    cursor: pointer;
+  }
+  
+  /* main body */
+  .main__body {
+    display: flex;
+    height: 100vh;
+  }
+  
+  body {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  /* email list */
+  .emailList {
+    flex: 1;
+    overflow: scroll;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .emailList__settings {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+    z-index: 999;
+    padding: 8px;
+  }
+  
+  .emailList__settingsLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .emailList__settings .material-icons {
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    border-bottom-width: 2px;
+    padding: 15px;
+    min-width: 200px;
+    cursor: pointer;
+    color: grey;
+    border-width: 0;
+  }
+  
+  .emailList__sections {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid whitesmoke;
+    z-index: 999;
+  }
+  
+  .section__selected {
+    /* background-color: whitesmoke; */
+    border-width: 3px;
+    color: #177be0;
+    border-bottom: 3px solid #177be0;
+  }
+  
+  .section__selected .material-icons {
+    color: #177be0;
+  }
+  
+  .section:hover {
+    background-color: whitesmoke;
+    border-width: 3px;
+  }
+  
+  .section h4 {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .emailRow__index{
+    padding-right: 5px;
+    color: #044e97;
+  }
+  
+  .emailRow__options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .emailRow__options .material-icons,
+  input {
+    margin: 3px;
+  }
+  
+  .emailRow {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    z-index: 999;
+    padding-left: 20px;
+  }
+  
+  .emailRow:hover {
+    border-top: 1px solid whitesmoke;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .emailRow__message {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    font-size: 14px;
+    overflow: hidden;
+  }
+  
+  .emailRow__message h4 {
+    min-width: 200px;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0px;
+    padding-right: 5px;
+    margin-right: auto;
+  }
+  
+  .emailRow__sender {
+    width: 300px;
+    font-size: 14px;
+    flex: 0.3;
+    padding-right: 0px; 
+  }
+  
+  .emailRow__time {
+    padding-right: 12px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .emailRow__description {
+    font-weight: 400;
+    color: gray;
+  }
+
+  .row__selected h4 {
+    font-weight: 300;
+    color: #676767;
+  }
+
+  .row__selected h3 {
+    font-weight: 300;
+    color: #676767;
+  }
+
+  .row__selected p {
+    font-weight: 300;
+    color: #676767;
+  }
+
+  .row__selected {
+    background-color: #eaf1fb;
+}
+
+#instruction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 20px;
+  width: 100%;
+}
+
+#nextButton {
+  width: 300px;
+  height: 40px;
+  font-size: 15px; 
+  text-align: center; 
+  padding: 0px; 
+  margin: 5px;
+  background-color: #044e97;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#nextButton:hover {
+  background-color: #537799; 
+}

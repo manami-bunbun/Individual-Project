@@ -1,0 +1,83 @@
+/* 基本的なリセットとフォント設定 */
+body, h1, h2, h3, p, table {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* コンテナー */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.563);
+}
+
+/* ヘッダー */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* テーブルスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #7c7b7ba9;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: normal;
+}
+
+/* カラムヘッダー */
+th:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+/* リンクスタイル */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 選択された行のスタイル */
+.selected {
+    background-color: #ddd;
+    box-shadow: #0b0b0b; /* 灰色の背景 */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#instruction-container {
+    text-align: right;
+}
+
+.instruction {
+    font-size: 16px;
+    margin-bottom: 10px; /* 必要に応じて調整 */
+}
