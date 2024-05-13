@@ -169,7 +169,7 @@ function updateInstruction() {
 }
 
 function saveSelectedRowsToServer(condition, recordTime, selectedRows) {
-    const orderByID = {}; // IDをキーとして選択された順序を記録する
+    const orderByID = {}; 
 
 
 

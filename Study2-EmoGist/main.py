@@ -32,13 +32,6 @@ os.environ['AUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 app = FastAPI()
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  # すべてのオリジンを許可
-#     allow_credentials=True,
-#     allow_methods=["*"],  # すべてのHTTPメソッドを許可
-#     allow_headers=["*"],  # すべてのヘッダーを許可
-# )
 
 app.add_middleware(SessionMiddleware, secret_key="INDIVIDUALPROJECT", max_age=3600)
 
@@ -173,7 +166,7 @@ def privacy_policy(request: Request):
         context={'request': request}
     )
 
-# 条件適用ページ
+
 @app.get("/experiments/{condition}")
 async def experiments(request: Request, condition: str):
     userID = request.session.get('userID')
@@ -254,10 +247,10 @@ def end_page(request: Request):
 
 # API
 
-# 開始ボタンがクリックされたとき
+
 @app.get("/start")
 async def start_experiment():
-    # 最初の条件の適用ページにリダイレクト
+
     return RedirectResponse("/apply-random-condition")
 
 class UpdateSelectedRowsRequest(BaseModel):
@@ -296,7 +289,6 @@ async def update_selected_rows(request: Request):
     
     return {"message": "Row Order updated successfully."}
 
-# ランダムな条件の設定
 @app.route("/apply-random-condition", methods=["GET", "POST"])
 async def apply_random_condition(request: Request):
     random_conditions = request.session.get('random_conditions')

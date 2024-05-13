@@ -186,20 +186,18 @@ def get_email_data(credentials):
             id=message['id']
         ).execute()
 
-        # ヘッダー情報
+ 
         headers = m_data['payload']['headers']
 
         date_header = get_header(headers, 'date')
         message_date = parsedate_to_datetime(date_header)
 
-        # 現在の日付
+
         now = datetime.now(message_date.tzinfo)
 
         if message_date.date() == now.date():
-            # 今日のメールの場合は時刻のみ
             formatted_date = message_date.strftime('%H:%M')
         else:
-            # それ以外の場合は日付のみ
             formatted_date = message_date.strftime('%d %b')
 
         sender = get_header(headers, 'from')

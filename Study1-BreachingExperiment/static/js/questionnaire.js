@@ -1,13 +1,12 @@
 document.getElementById("questionnaireForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // フォームデータを収集する
     var formData = {};
     this.querySelectorAll('input[type="radio"]:checked').forEach(function(input) {
         formData[input.name] = input.value;
     });
 
-    // データ送信の確認
+
     var isComplete = Object.keys(formData).length === 9;
     if (!isComplete) {
         alert("Please answer all questions.");
@@ -16,7 +15,6 @@ document.getElementById("questionnaireForm").addEventListener("submit", function
 
     console.log(formData);
 
-    // POSTリクエストでサーバーに送信する
     fetch(`/questionnaire/${condition}`, { 
         method: 'POST',
         headers: {
@@ -35,7 +33,7 @@ document.getElementById("questionnaireForm").addEventListener("submit", function
     })
     .then(data => {
         console.log('Questionnaire submitted:', data);
-        window.location.href = "/apply-random-condition"; // 成功した後のリダイレクト先
+        window.location.href = "/apply-random-condition";
     })
     .catch(error => {
         console.error('Error:', error);
